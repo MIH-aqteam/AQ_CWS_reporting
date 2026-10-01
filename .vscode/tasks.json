@@ -1,0 +1,53 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "local",
+            "type": "shell",
+            "command": "& 'C:\\Program Files\\QGIS 3.44.5\\apps\\Python312\\python.exe' -m sphinx --keep-going -E -a -b html source 'build\\html'; if ($LASTEXITCODE -eq 0) { Start-Process '${workspaceFolder}\\build\\html\\index.html' } else { exit $LASTEXITCODE }",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PYTHONPATH": "${env:LOCALAPPDATA}\\AURA\\Python"
+                },
+                "shell": {
+                    "executable": "powershell.exe",
+                    "args": [
+                        "-NoProfile",
+                        "-Command"
+                    ]
+                }
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },
+        {
+            "label": "make_pdf",
+            "type": "shell",
+            "command": "$ErrorActionPreference = 'Stop'; $python = 'C:\\Program Files\\QGIS 3.44.5\\apps\\Python312\\python.exe'; $chrome = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'; $docs = '${workspaceFolder}\\build\\html'; $combined = Join-Path $docs '_pdf_reporting_guide.html'; $pdf = '${workspaceFolder}\\AQ_eReporting_Guide.pdf'; $staticPdf = '${workspaceFolder}\\source\\_static\\AQ_eReporting_Guide.pdf'; Write-Host '============================================================'; Write-Host '        AQ REPORTING GUIDE - PDF GENERATION'; Write-Host '============================================================'; Write-Host ''; Write-Host 'Refreshing the local HTML build...'; & $python -m sphinx --keep-going -E -a -b html source 'build\\html'; if ($LASTEXITCODE -ne 0) { throw 'Sphinx build failed.' }; Write-Host ''; Write-Host 'Local HTML build completed.'; if (-not (Test-Path $docs -PathType Container)) { throw 'build\\html folder was not created by the local build.' }; if (-not (Test-Path $chrome -PathType Leaf)) { throw 'Google Chrome not found at the expected location.' }; & $python '${workspaceFolder}\\scripts\\make_pdf.py' $docs $combined; if ($LASTEXITCODE -ne 0) { throw 'Combined PDF HTML generation failed.' }; Write-Host ''; Write-Host 'Creating AQ eReporting Guide PDF with Chrome...'; & $chrome --headless --disable-gpu --no-pdf-header-footer \"--print-to-pdf=$pdf\" $combined; if (-not (Test-Path $pdf -PathType Leaf)) { throw 'PDF was not generated.' }; if ((Get-Item $pdf).Length -eq 0) { throw 'PDF was generated but is empty.' }; Copy-Item -Force $pdf $staticPdf; Write-Host ''; Write-Host 'SUCCESS'; Write-Host 'PDF created at:'; Write-Host $pdf; Write-Host ''; Write-Host 'Website PDF updated at:'; Write-Host $staticPdf; Write-Host 'The guide source files were not modified.'",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PYTHONPATH": "${env:LOCALAPPDATA}\\AURA\\Python"
+                },
+                "shell": {
+                    "executable": "powershell.exe",
+                    "args": [
+                        "-NoProfile",
+                        "-Command"
+                    ]
+                }
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        }
+    ]
+}
