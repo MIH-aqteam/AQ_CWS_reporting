@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -8,18 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Documentation Relationships &mdash; AQ eReporting Guide 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=22faff2e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-      <script src="../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=2709fde1"></script>
-      <script src="../_static/doctools.js?v=9a2dae69"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=2709fde1"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -193,7 +195,7 @@
 <span class="sd-summary-text">Meaning of DataTable</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Documentation.DataTable</span></code> indicates the reporting table in which a process must look for the documentation identifier.</p>
 <p class="sd-card-text">For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DataTable</span> <span class="o">=</span> <span class="s1">&#39;ModelObjectiveEstimation&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DataTable</span> <span class="o">=</span> <span class="s1">'ModelObjectiveEstimation'</span>
 </pre></div>
 </div>
 <p class="sd-card-text">means that the <code class="docutils literal notranslate"><span class="pre">DocumentId</span></code> must be found in a documentation-reference column in:</p>
@@ -201,7 +203,7 @@
 </pre></div>
 </div>
 <p class="sd-card-text">Similarly:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DataTable</span> <span class="o">=</span> <span class="s1">&#39;SamplingProcess&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DataTable</span> <span class="o">=</span> <span class="s1">'SamplingProcess'</span>
 </pre></div>
 </div>
 <p class="sd-card-text">means that the document identifier must be looked up in:</p>
@@ -221,9 +223,9 @@
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">DataQualityDocumentId</span></code>.</p></li>
 </ul>
 <p class="sd-card-text">A documentation row with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DataTable</span> <span class="o">=</span> <span class="s1">&#39;ModelObjectiveEstimation&#39;</span>
-<span class="n">DocumentType</span> <span class="o">=</span> <span class="s1">&#39;MethodDocument&#39;</span>
-<span class="n">DocumentId</span> <span class="o">=</span> <span class="s1">&#39;DOC-001&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DataTable</span> <span class="o">=</span> <span class="s1">'ModelObjectiveEstimation'</span>
+<span class="n">DocumentType</span> <span class="o">=</span> <span class="s1">'MethodDocument'</span>
+<span class="n">DocumentId</span> <span class="o">=</span> <span class="s1">'DOC-001'</span>
 </pre></div>
 </div>
 <p class="sd-card-text">means that a process should search for <code class="docutils literal notranslate"><span class="pre">DOC-001</span></code> in:</p>
@@ -231,9 +233,9 @@
 </pre></div>
 </div>
 <p class="sd-card-text">A documentation row with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DataTable</span> <span class="o">=</span> <span class="s1">&#39;ModelObjectiveEstimation&#39;</span>
-<span class="n">DocumentType</span> <span class="o">=</span> <span class="s1">&#39;DataQualityDocument&#39;</span>
-<span class="n">DocumentId</span> <span class="o">=</span> <span class="s1">&#39;DOC-002&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DataTable</span> <span class="o">=</span> <span class="s1">'ModelObjectiveEstimation'</span>
+<span class="n">DocumentType</span> <span class="o">=</span> <span class="s1">'DataQualityDocument'</span>
+<span class="n">DocumentId</span> <span class="o">=</span> <span class="s1">'DOC-002'</span>
 </pre></div>
 </div>
 <p class="sd-card-text">means that a process should search for <code class="docutils literal notranslate"><span class="pre">DOC-002</span></code> in:</p>
@@ -284,10 +286,10 @@
 </ul>
 <p class="sd-card-text"><strong>Method Document</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Documentation</span><span class="o">.</span><span class="n">DataTable</span>
-    <span class="o">=</span> <span class="s1">&#39;ModelObjectiveEstimation&#39;</span>
+    <span class="o">=</span> <span class="s1">'ModelObjectiveEstimation'</span>
 
 <span class="n">Documentation</span><span class="o">.</span><span class="n">DocumentType</span>
-    <span class="o">=</span> <span class="s1">&#39;MethodDocument&#39;</span>
+    <span class="o">=</span> <span class="s1">'MethodDocument'</span>
 
 <span class="n">Documentation</span><span class="o">.</span><span class="n">DocumentId</span>
     <span class="ow">is</span> <span class="n">searched</span> <span class="ow">in</span>
@@ -296,10 +298,10 @@
 </div>
 <p class="sd-card-text"><strong>Data-Quality Document</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Documentation</span><span class="o">.</span><span class="n">DataTable</span>
-    <span class="o">=</span> <span class="s1">&#39;ModelObjectiveEstimation&#39;</span>
+    <span class="o">=</span> <span class="s1">'ModelObjectiveEstimation'</span>
 
 <span class="n">Documentation</span><span class="o">.</span><span class="n">DocumentType</span>
-    <span class="o">=</span> <span class="s1">&#39;DataQualityDocument&#39;</span>
+    <span class="o">=</span> <span class="s1">'DataQualityDocument'</span>
 
 <span class="n">Documentation</span><span class="o">.</span><span class="n">DocumentId</span>
     <span class="ow">is</span> <span class="n">searched</span> <span class="ow">in</span>
@@ -319,16 +321,16 @@
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">ProcessDocumentId</span></code>.</p></li>
 </ul>
 <p class="sd-card-text">The corresponding mappings are conceptually:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DataTable = &#39;SamplingProcess&#39;
-DocumentType = &#39;DataQualityDocument&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DataTable = 'SamplingProcess'
+DocumentType = 'DataQualityDocument'
     → SamplingProcess.DataQualityDocumentId
 
-DataTable = &#39;SamplingProcess&#39;
-DocumentType = &#39;EquivalenceDemonstrationDocument&#39;
+DataTable = 'SamplingProcess'
+DocumentType = 'EquivalenceDemonstrationDocument'
     → SamplingProcess.EquivalenceDemonstrationDocumentId
 
-DataTable = &#39;SamplingProcess&#39;
-DocumentType = &#39;ProcessDocument&#39;
+DataTable = 'SamplingProcess'
+DocumentType = 'ProcessDocument'
     → SamplingProcess.ProcessDocumentId
 </pre></div>
 </div>
@@ -343,8 +345,8 @@ DocumentType = &#39;ProcessDocument&#39;
 </pre></div>
 </div>
 <p class="sd-card-text">the corresponding logical mapping is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DataTable = &#39;MeasurementStation&#39;
-DocumentType = &#39;NetworkDocument&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DataTable = 'MeasurementStation'
+DocumentType = 'NetworkDocument'
     → MeasurementStation.NetworkDocumentId
 </pre></div>
 </div>
@@ -358,8 +360,8 @@ DocumentType = &#39;NetworkDocument&#39;
 </pre></div>
 </div>
 <p class="sd-card-text">the corresponding mapping is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DataTable = &#39;PollutionLevelAdjustment&#39;
-DocumentType = &#39;AdjustmentDocument&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DataTable = 'PollutionLevelAdjustment'
+DocumentType = 'AdjustmentDocument'
     → PollutionLevelAdjustment.AdjustmentDocumentId
 </pre></div>
 </div>
@@ -373,8 +375,8 @@ DocumentType = &#39;AdjustmentDocument&#39;
 </pre></div>
 </div>
 <p class="sd-card-text">the corresponding mapping is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DataTable = &#39;CompliancePlanLink&#39;
-DocumentType = &#39;PlanDocument&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DataTable = 'CompliancePlanLink'
+DocumentType = 'PlanDocument'
     → CompliancePlanLink.PlanDocumentId
 </pre></div>
 </div>
@@ -388,8 +390,8 @@ DocumentType = &#39;PlanDocument&#39;
 </pre></div>
 </div>
 <p class="sd-card-text">the corresponding mapping is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DataTable = &#39;SourceApportionment&#39;
-DocumentType = &#39;SourceApportionmentDocument&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>DataTable = 'SourceApportionment'
+DocumentType = 'SourceApportionmentDocument'
     → SourceApportionment.SourceApportionmentDocumentId
 </pre></div>
 </div>
@@ -401,14 +403,14 @@ DocumentType = &#39;SourceApportionmentDocument&#39;
 <p class="sd-card-text">The documentation relationship can be interpreted from either direction.</p>
 <p class="sd-card-text"><strong>From a Reporting Table to Documentation</strong></p>
 <p class="sd-card-text">A process reads a documentation-reference attribute, for example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ModelObjectiveEstimation</span><span class="o">.</span><span class="n">MethodDocumentId</span> <span class="o">=</span> <span class="s1">&#39;DOC-001&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ModelObjectiveEstimation</span><span class="o">.</span><span class="n">MethodDocumentId</span> <span class="o">=</span> <span class="s1">'DOC-001'</span>
 </pre></div>
 </div>
 <p class="sd-card-text">It then expects a <code class="docutils literal notranslate"><span class="pre">Documentation</span></code> row containing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CountryCode</span> <span class="o">=</span> <span class="n">the</span> <span class="n">same</span> <span class="n">country</span>
-<span class="n">DataTable</span> <span class="o">=</span> <span class="s1">&#39;ModelObjectiveEstimation&#39;</span>
-<span class="n">DocumentType</span> <span class="o">=</span> <span class="s1">&#39;MethodDocument&#39;</span>
-<span class="n">DocumentId</span> <span class="o">=</span> <span class="s1">&#39;DOC-001&#39;</span>
+<span class="n">DataTable</span> <span class="o">=</span> <span class="s1">'ModelObjectiveEstimation'</span>
+<span class="n">DocumentType</span> <span class="o">=</span> <span class="s1">'MethodDocument'</span>
+<span class="n">DocumentId</span> <span class="o">=</span> <span class="s1">'DOC-001'</span>
 </pre></div>
 </div>
 <p class="sd-card-text"><strong>From Documentation to a Reporting Table</strong></p>
